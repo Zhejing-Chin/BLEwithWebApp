@@ -1,4 +1,6 @@
 # BLEwithWebApp
+** the code is still ongoing
+
 
 BLE:
 1. Scan nearby BLE devices and show them in tableview
