@@ -3,27 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188C9B2E6C5939EBF346D45D /* Pods_Jaspat_Online_Restaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDAC86AD113459AE4699345 /* Pods_Jaspat_Online_Restaurant.framework */; };
+		547578E024B3130D00D7CAD8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 547578DF24B3130D00D7CAD8 /* Default-568h@2x.png */; };
+		547578E624B4817C00D7CAD8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547578E524B4817B00D7CAD8 /* ViewController.swift */; };
 		54AEA6AF24B21F2B0009D884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEA6AE24B21F2B0009D884 /* AppDelegate.swift */; };
 		54AEA6B124B21F2B0009D884 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEA6B024B21F2B0009D884 /* SceneDelegate.swift */; };
-		54AEA6B324B21F2B0009D884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEA6B224B21F2B0009D884 /* ViewController.swift */; };
 		54AEA6B624B21F2B0009D884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54AEA6B424B21F2B0009D884 /* Main.storyboard */; };
 		54AEA6B824B21F430009D884 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54AEA6B724B21F430009D884 /* Assets.xcassets */; };
 		54AEA6BB24B21F430009D884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54AEA6B924B21F430009D884 /* LaunchScreen.storyboard */; };
+		54AEA6C524B2F5170009D884 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54AEA6C324B2F50F0009D884 /* WebKit.framework */; };
+		54EB5B2524BB1CF50061A6E1 /* BluetoothKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EB5B2424BB1CF50061A6E1 /* BluetoothKit.framework */; };
+		54EB5B2824BB20450061A6E1 /* BLEPrinterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB5B2724BB20450061A6E1 /* BLEPrinterService.swift */; };
+		54EB5B4F24BC21CF0061A6E1 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EB5B4E24BC21CF0061A6E1 /* CoreBluetooth.framework */; };
+		54EB5B5124BC24820061A6E1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB5B5024BC24820061A6E1 /* SecondViewController.swift */; };
+		54EB5B5524BC9EF10061A6E1 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB5B5424BC9EF10061A6E1 /* BLE.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		54AEA6AB24B21F2B0009D884 /* WebApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06D1E19774D60DC752DF3E18 /* Pods-Jaspat Online Restaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jaspat Online Restaurant.release.xcconfig"; path = "Target Support Files/Pods-Jaspat Online Restaurant/Pods-Jaspat Online Restaurant.release.xcconfig"; sourceTree = "<group>"; };
+		547578DF24B3130D00D7CAD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		547578E524B4817B00D7CAD8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54AEA6AB24B21F2B0009D884 /* Jaspat Online Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jaspat Online Restaurant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AEA6AE24B21F2B0009D884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54AEA6B024B21F2B0009D884 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		54AEA6B224B21F2B0009D884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		54AEA6B524B21F2B0009D884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54AEA6B724B21F430009D884 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54AEA6BA24B21F430009D884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54AEA6BC24B21F430009D884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54AEA6C324B2F50F0009D884 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		54EB5B2424BB1CF50061A6E1 /* BluetoothKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BluetoothKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54EB5B2724BB20450061A6E1 /* BLEPrinterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPrinterService.swift; sourceTree = "<group>"; };
+		54EB5B4E24BC21CF0061A6E1 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		54EB5B5024BC24820061A6E1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		54EB5B5424BC9EF10061A6E1 /* BLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
+		EBDAC86AD113459AE4699345 /* Pods_Jaspat_Online_Restaurant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jaspat_Online_Restaurant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF3E03E5A6205716F2DD228 /* Pods-Jaspat Online Restaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jaspat Online Restaurant.debug.xcconfig"; path = "Target Support Files/Pods-Jaspat Online Restaurant/Pods-Jaspat Online Restaurant.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54EB5B2524BB1CF50061A6E1 /* BluetoothKit.framework in Frameworks */,
+				54AEA6C524B2F5170009D884 /* WebKit.framework in Frameworks */,
+				54EB5B4F24BC21CF0061A6E1 /* CoreBluetooth.framework in Frameworks */,
+				188C9B2E6C5939EBF346D45D /* Pods_Jaspat_Online_Restaurant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,51 +62,79 @@
 		54AEA6A224B21F2B0009D884 = {
 			isa = PBXGroup;
 			children = (
-				54AEA6AD24B21F2B0009D884 /* WebApp */,
+				547578DF24B3130D00D7CAD8 /* Default-568h@2x.png */,
+				54AEA6AD24B21F2B0009D884 /* Jaspat Online Restaurant */,
 				54AEA6AC24B21F2B0009D884 /* Products */,
+				54AEA6C224B2F50D0009D884 /* Frameworks */,
+				CF0C42645EC41A7DB66CB764 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		54AEA6AC24B21F2B0009D884 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54AEA6AB24B21F2B0009D884 /* WebApp.app */,
+				54AEA6AB24B21F2B0009D884 /* Jaspat Online Restaurant.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		54AEA6AD24B21F2B0009D884 /* WebApp */ = {
+		54AEA6AD24B21F2B0009D884 /* Jaspat Online Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				547578E524B4817B00D7CAD8 /* ViewController.swift */,
+				54EB5B5024BC24820061A6E1 /* SecondViewController.swift */,
 				54AEA6AE24B21F2B0009D884 /* AppDelegate.swift */,
 				54AEA6B024B21F2B0009D884 /* SceneDelegate.swift */,
-				54AEA6B224B21F2B0009D884 /* ViewController.swift */,
 				54AEA6B424B21F2B0009D884 /* Main.storyboard */,
 				54AEA6B724B21F430009D884 /* Assets.xcassets */,
 				54AEA6B924B21F430009D884 /* LaunchScreen.storyboard */,
 				54AEA6BC24B21F430009D884 /* Info.plist */,
+				54EB5B2724BB20450061A6E1 /* BLEPrinterService.swift */,
+				54EB5B5424BC9EF10061A6E1 /* BLE.swift */,
 			);
-			path = WebApp;
+			path = "Jaspat Online Restaurant";
+			sourceTree = "<group>";
+		};
+		54AEA6C224B2F50D0009D884 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54EB5B4E24BC21CF0061A6E1 /* CoreBluetooth.framework */,
+				54AEA6C324B2F50F0009D884 /* WebKit.framework */,
+				54EB5B2424BB1CF50061A6E1 /* BluetoothKit.framework */,
+				EBDAC86AD113459AE4699345 /* Pods_Jaspat_Online_Restaurant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF0C42645EC41A7DB66CB764 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEF3E03E5A6205716F2DD228 /* Pods-Jaspat Online Restaurant.debug.xcconfig */,
+				06D1E19774D60DC752DF3E18 /* Pods-Jaspat Online Restaurant.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		54AEA6AA24B21F2B0009D884 /* WebApp */ = {
+		54AEA6AA24B21F2B0009D884 /* Jaspat Online Restaurant */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54AEA6BF24B21F430009D884 /* Build configuration list for PBXNativeTarget "WebApp" */;
+			buildConfigurationList = 54AEA6BF24B21F430009D884 /* Build configuration list for PBXNativeTarget "Jaspat Online Restaurant" */;
 			buildPhases = (
+				2A4869FCC466D6C5E947B054 /* [CP] Check Pods Manifest.lock */,
 				54AEA6A724B21F2B0009D884 /* Sources */,
 				54AEA6A824B21F2B0009D884 /* Frameworks */,
 				54AEA6A924B21F2B0009D884 /* Resources */,
+				20E83DC3831038832643307B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WebApp;
+			name = "Jaspat Online Restaurant";
 			productName = WebApp;
-			productReference = 54AEA6AB24B21F2B0009D884 /* WebApp.app */;
+			productReference = 54AEA6AB24B21F2B0009D884 /* Jaspat Online Restaurant.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 54AEA6A624B21F2B0009D884 /* Build configuration list for PBXProject "WebApp" */;
+			buildConfigurationList = 54AEA6A624B21F2B0009D884 /* Build configuration list for PBXProject "Jaspat Online Restaurant" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +165,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				54AEA6AA24B21F2B0009D884 /* WebApp */,
+				54AEA6AA24B21F2B0009D884 /* Jaspat Online Restaurant */,
 			);
 		};
 /* End PBXProject section */
@@ -127,19 +177,65 @@
 			files = (
 				54AEA6BB24B21F430009D884 /* LaunchScreen.storyboard in Resources */,
 				54AEA6B824B21F430009D884 /* Assets.xcassets in Resources */,
+				547578E024B3130D00D7CAD8 /* Default-568h@2x.png in Resources */,
 				54AEA6B624B21F2B0009D884 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20E83DC3831038832643307B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jaspat Online Restaurant/Pods-Jaspat Online Restaurant-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jaspat Online Restaurant/Pods-Jaspat Online Restaurant-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Jaspat Online Restaurant/Pods-Jaspat Online Restaurant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A4869FCC466D6C5E947B054 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jaspat Online Restaurant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		54AEA6A724B21F2B0009D884 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54AEA6B324B21F2B0009D884 /* ViewController.swift in Sources */,
+				547578E624B4817C00D7CAD8 /* ViewController.swift in Sources */,
+				54EB5B5524BC9EF10061A6E1 /* BLE.swift in Sources */,
 				54AEA6AF24B21F2B0009D884 /* AppDelegate.swift in Sources */,
+				54EB5B2824BB20450061A6E1 /* BLEPrinterService.swift in Sources */,
+				54EB5B5124BC24820061A6E1 /* SecondViewController.swift in Sources */,
 				54AEA6B124B21F2B0009D884 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,17 +378,19 @@
 		};
 		54AEA6C024B21F430009D884 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEF3E03E5A6205716F2DD228 /* Pods-Jaspat Online Restaurant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3KFBMYXUK;
-				INFOPLIST_FILE = WebApp/Info.plist;
+				INFOPLIST_FILE = "Jaspat Online Restaurant/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = gogain.WebApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = gogain.JaspatOnlineRestaurant;
+				PRODUCT_NAME = "Jaspat Online Restaurant";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,17 +398,19 @@
 		};
 		54AEA6C124B21F430009D884 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06D1E19774D60DC752DF3E18 /* Pods-Jaspat Online Restaurant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3KFBMYXUK;
-				INFOPLIST_FILE = WebApp/Info.plist;
+				INFOPLIST_FILE = "Jaspat Online Restaurant/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = gogain.WebApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = gogain.JaspatOnlineRestaurant;
+				PRODUCT_NAME = "Jaspat Online Restaurant";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,7 +419,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		54AEA6A624B21F2B0009D884 /* Build configuration list for PBXProject "WebApp" */ = {
+		54AEA6A624B21F2B0009D884 /* Build configuration list for PBXProject "Jaspat Online Restaurant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54AEA6BD24B21F430009D884 /* Debug */,
@@ -328,7 +428,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54AEA6BF24B21F430009D884 /* Build configuration list for PBXNativeTarget "WebApp" */ = {
+		54AEA6BF24B21F430009D884 /* Build configuration list for PBXNativeTarget "Jaspat Online Restaurant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54AEA6C024B21F430009D884 /* Debug */,

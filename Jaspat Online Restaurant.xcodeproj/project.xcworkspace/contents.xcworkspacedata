@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:WebApp.xcodeproj">
+      location = "self:/Users/gogainchin/Desktop/WebApp/Jaspat Online Restaurant.xcodeproj">
    </FileRef>
 </Workspace>

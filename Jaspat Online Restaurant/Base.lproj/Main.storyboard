@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8OV-8A-ath">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Jaspat_Online_Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NYP-mv-dVl"/>
+                        <viewControllerLayoutGuide type="bottom" id="JJR-W5-8q0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ug7-LD-DQh">
+                                <rect key="frame" x="2" y="88" width="410" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ug7-LD-DQh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GVF-xo-xtb"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ug7-LD-DQh" secondAttribute="bottom" id="SvL-j2-smH"/>
+                            <constraint firstItem="ug7-LD-DQh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qJM-nv-jq7"/>
+                            <constraint firstItem="ug7-LD-DQh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" multiplier="0.1" id="xe3-Fn-YKn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xVH-Cp-P9Y">
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.left" catalog="system" id="xPl-6L-lWK">
+                            <connections>
+                                <action selector="backTapped:" destination="BYZ-38-t0r" id="LSx-Ux-hiG"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Refresh" id="Mz1-uc-8uS">
+                                <connections>
+                                    <action selector="refreshTapped:" destination="BYZ-38-t0r" id="bRO-ec-PRA"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Bluetooth Printer" id="QqU-Xo-Y2F">
+                                <connections>
+                                    <action selector="printerTapped:" destination="BYZ-38-t0r" id="hdg-nX-ohm"/>
+                                    <segue destination="1Jj-np-5FN" kind="popoverPresentation" identifier="printer" popoverAnchorBarButtonItem="QqU-Xo-Y2F" id="9R5-EK-JVV">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                        <connections>
+                            <outlet property="backBarButtonItem" destination="xPl-6L-lWK" id="IrX-b4-cbv"/>
+                        </connections>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="xPl-6L-lWK" id="y9T-l0-a5y"/>
+                        <outlet property="printerButton" destination="QqU-Xo-Y2F" id="nMz-pM-rum"/>
+                        <outlet property="refreshButton" destination="Mz1-uc-8uS" id="Tjm-Gc-Lar"/>
+                        <outlet property="webPage" destination="ug7-LD-DQh" id="LJx-1i-roF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12672" y="38"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rTy-Ka-rWi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8OV-8A-ath" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ik2-n6-b9b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l5e-Qi-Jjp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xoa-Uu-ITN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13475" y="38"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Csl-gD-Ry0">
+            <objects>
+                <viewController id="1Jj-np-5FN" customClass="SecondViewController" customModule="Jaspat_Online_Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1R0-Dk-S93"/>
+                        <viewControllerLayoutGuide type="bottom" id="7K3-mW-uih"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CT5-Hr-8ps">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hLA-uY-kTo" userLabel="tableView">
+                                <rect key="frame" x="0.0" y="8" width="414" height="800"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="6Vm-2u-Mip">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Vm-2u-Mip" id="eMn-Rf-o0b">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hLA-uY-kTo" firstAttribute="top" secondItem="1R0-Dk-S93" secondAttribute="bottom" constant="8" id="Iqu-br-FD1"/>
+                            <constraint firstItem="hLA-uY-kTo" firstAttribute="bottom" secondItem="CT5-Hr-8ps" secondAttribute="bottomMargin" id="K2q-aT-F6u"/>
+                            <constraint firstItem="hLA-uY-kTo" firstAttribute="centerX" secondItem="CT5-Hr-8ps" secondAttribute="centerX" id="iBM-Pv-IRw"/>
+                            <constraint firstItem="hLA-uY-kTo" firstAttribute="leading" secondItem="CT5-Hr-8ps" secondAttribute="leadingMargin" constant="-20" id="sMC-ML-uMf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1dw-5q-RdZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="hLA-uY-kTo" id="0NE-t8-ngO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l7C-fh-gvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11943" y="38"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+    </resources>
+</document>

@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  WebApp
+//  Jaspat Online Restaurant
 //
 //  Created by Gogain Chin on 05/07/2020.
 //  Copyright © 2020 Gogain Chin. All rights reserved.
