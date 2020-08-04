@@ -12,11 +12,12 @@ import WebKit
 
 class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler, UIPopoverPresentationControllerDelegate {
 
+    static var vc: ViewController?
     var website = "http://thaiphp.ganoexcel.com/index.php"
-    var device: CBPeripheral!
-    var characteristic: CBCharacteristic!
+    var centralManager: CBCentralManager!
+    var deviceToConnect: CBPeripheral!
+    var char: CBCharacteristic!
     var deviceReady: Bool!
-    let ble = BLEPrinterService()
   
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var refreshButton: UIBarButtonItem!
@@ -26,6 +27,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ViewController.vc = self
         
         webPage.navigationDelegate = self
         webPage.uiDelegate = self
@@ -38,14 +40,18 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
 //        printerButton.tintColor = UIColor.clear
     }
     
+    func setCB(centralManager: CBCentralManager, deviceToConnect: CBPeripheral, char: CBCharacteristic, deviceReady: Bool) {
+        self.centralManager = centralManager
+        self.deviceToConnect = deviceToConnect
+        self.char = char
+        self.deviceReady = deviceReady
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "print" {
             if let view = segue.destination as? SecondViewController {
                 view.popoverPresentationController?.delegate = self
                 view.preferredContentSize = CGSize(width: 160, height: 100)
-//                view.delegate = self
-                view.deviceToConnect = device
-                view.char = characteristic
             }
         }
     }
@@ -119,12 +125,33 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         }
     }
 
+    // MARK:- Convert Hext to NSData
+    func hexToNSData(string: String) -> NSData {
+        let length = string.count
+        
+        
+        let rawData = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: length/2)
+        var rawIndex = 0
+        
+        for index in stride(from: 0, to: length, by: 2){
+            let single = NSMutableString()
+            let startIndex = string.index(string.startIndex, offsetBy: index)
+            let endIndex = string.index(string.startIndex, offsetBy: index+2)
+            single.append(String(string[startIndex..<endIndex]))
+            rawData[rawIndex] = UInt8(single as String, radix:16)!
+            rawIndex+=1
+        }
+        
+        let data:NSData = NSData(bytes: rawData, length: length/2)
+        rawData.deallocate()
+        
+        return data
+    }
+    
     //MARK:- Print
     func printCurrentPage() {
-        device = BLE.sharedInstance.deviceToConnect
-        characteristic = BLE.sharedInstance.char
-        deviceReady = BLE.sharedInstance.deviceReady
-        print("Peripheral info: \(String(describing: device))")
+        
+        print("Peripheral info: \(String(describing: deviceToConnect))")
         printLine(line: "Jaspat Online Restaurant")
         
     }
@@ -134,23 +161,12 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
             return
         }
         
-        let lineFeed = ble.hexToNSData(string: "0A")
-        let printer  = device!
+        let lineFeed = hexToNSData(string: "0A")
+        let printer  = deviceToConnect!
         
-        printer.writeValue(line.data(using: String.Encoding.utf8)!, for: characteristic, type: CBCharacteristicWriteType.withResponse)
+        printer.writeValue(line.data(using: String.Encoding.utf8)!, for: char, type: CBCharacteristicWriteType.withResponse)
         
-        printer.writeValue(lineFeed as Data, for: characteristic, type: CBCharacteristicWriteType.withResponse)
+        printer.writeValue(lineFeed as Data, for: char, type: CBCharacteristicWriteType.withResponse)
     }
 
 }
-
-//extension ViewController: PassDataDelegate {
-//    func passPeripheral(_ device: CBPeripheral!) {
-//        self.device = device
-//    }
-//
-//    func passCharacteristic(_ characteristic: CBCharacteristic!) {
-//        self.characteristic = characteristic
-//        self.deviceReady = true
-//    }
-//}

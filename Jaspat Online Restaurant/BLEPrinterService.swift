@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreBluetooth
-import BluetoothKit
+//import BluetoothKit
 
 class BLEPrinterService : BKPeripheralDelegate, BKCentralDelegate, BKAvailabilityObserver, BKRemotePeripheralDelegate, BKRemotePeerDelegate {
     func remotePeer(_ remotePeer: BKRemotePeer, didSendArbitraryData data: Data) {

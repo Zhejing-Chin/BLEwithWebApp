@@ -29,17 +29,20 @@ class BLE: NSObject {
     public var deviceAlert:UIAlertController?
     public var deviceSheet:UIAlertController?
     
+    
     //Device UUID properties
     struct myDevice {
         static var ServiceUUID:CBUUID?
         static var CharactersticUUID:CBUUID?
     }
     
-    weak var tableView = SecondViewController.tableView
+//    weak var tableView = SecondViewController.tableView
     
     // MARK: - Init method
     
-    private override init() { }
+    private override init() {
+
+    }
 }
 
 extension BLE: CBCentralManagerDelegate {
@@ -74,7 +77,6 @@ extension BLE: CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         if !peripherals.contains(peripheral) && peripheral.name != nil {
             peripherals.append(peripheral)
-            tableView!.reloadData()
         }
     }
     
@@ -165,9 +167,9 @@ extension BLE: UITableViewDataSource {
 extension BLE {
     func startCentralManager() {
         centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
-        tableView!.dataSource = self
-        tableView!.delegate = self
-        tableView!.separatorStyle = .none
-        tableView!.tableFooterView = UIView()
+//        tableView!.dataSource = self
+//        tableView!.delegate = self
+//        tableView!.separatorStyle = .none
+//        tableView!.tableFooterView = UIView()
     }
 }

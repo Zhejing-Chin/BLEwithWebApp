@@ -9,52 +9,31 @@
 import CoreBluetooth
 import UIKit
 
-//protocol PassDataDelegate {
-//    func passPeripheral(_ device: CBPeripheral!)
-//
-//    func passCharacteristic(_ characteristic: CBCharacteristic!)
-//}
-
 class SecondViewController: UIViewController, CBPeripheralDelegate {
     
     var centralManager: CBCentralManager!
     var peripherals = Array<CBPeripheral>()
-    var deviceToConnect: CBPeripheral?
-    var char: CBCharacteristic?
-    var deviceReady: Bool?
+    var deviceToConnect: CBPeripheral!
+    var char: CBCharacteristic!
+    var deviceReady = false
      
-//    var delegate: PassDataDelegate?
+    @IBOutlet weak var tableView: UITableView!
     
-    weak static var tableView: UITableView!
-  
     override func viewDidLoad() {
         super.viewDidLoad()
-        BLE.sharedInstance.startCentralManager()
 
         //Initialise CoreBluetooth Central Manager
-//        centralManager = CBCentralManager(delegate: self, queue: nil)
-//        tableView.dataSource = self
-//        tableView.delegate = self
-//        tableView.separatorStyle = .none
-//        tableView.tableFooterView = UIView()
+        centralManager = CBCentralManager(delegate: self, queue: nil)
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorStyle = .none
+        tableView.tableFooterView = UIView()
     }
-    
-//    @IBAction func connectTapped(_ sender: Any) {
-//        connectToDevice()
-//        self.dismiss(animated: true, completion: nil)
-//    }
     
     func connectToDevice () {
         centralManager?.connect(deviceToConnect!, options: nil)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Create a new variable to store the instance of ViewController
-//        let destinationVC = segue.destination as! ViewController
-//        destinationVC.device = deviceToConnect
-//        destinationVC.characteristic = char
-//        destinationVC.deviceReady = deviceReady
-//    }
 }
      
 extension SecondViewController: CBCentralManagerDelegate {
@@ -86,25 +65,23 @@ extension SecondViewController: CBCentralManagerDelegate {
         }
     }
      
-//    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-//        if !peripherals.contains(peripheral) && peripheral.name != nil {
-//            peripherals.append(peripheral)
-//            tableView.reloadData()
-//        }
-//    }
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        if !peripherals.contains(peripheral) && peripheral.name != nil {
+            peripherals.append(peripheral)
+            tableView.reloadData()
+        }
+    }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        deviceReady = true
         //Stop Scan- We don't need to scan once we've connected to a peripheral. We got what we came for.
         centralManager?.stopScan()
         print("Scan Stopped")
         print("Peripheral info: \(String(describing: deviceToConnect))")
-
         deviceReady = true
+        
         //Discovery callback
         deviceToConnect!.delegate = self
         deviceToConnect?.discoverServices(nil)
-        
     }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
@@ -137,8 +114,11 @@ extension SecondViewController: CBCentralManagerDelegate {
 //            BEF8D6C9-9C21-4C9E-B632-BD58C1009F9F had properties Read+Write+Notify+Indicate
             //looks for the right characteristic
             if characteristic.uuid.isEqual(CBUUID(string: "BEF8D6C9-9C21-4C9E-B632-BD58C1009F9F"))  {
-                char = characteristic
-                
+                self.char = characteristic
+                if let controller = ViewController.vc {
+                    controller.setCB(centralManager: centralManager, deviceToConnect: deviceToConnect, char: char, deviceReady: deviceReady)
+                }
+                self.dismiss(animated: false, completion: nil)
                 break
             }
         }
@@ -150,10 +130,6 @@ extension SecondViewController: UITableViewDelegate {
         deviceToConnect = peripherals[indexPath.row]
         print(deviceToConnect!)
         connectToDevice()
-//        delegate?.passPeripheral(deviceToConnect!)
-//        delegate?.passCharacteristic(char!)
-        self.dismiss(animated: true, completion: nil)
-
     }
 }
 
