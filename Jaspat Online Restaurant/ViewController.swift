@@ -153,7 +153,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         
         print("Peripheral info: \(String(describing: deviceToConnect))")
         printLine(line: "Jaspat Online Restaurant")
-        
+        self.webPage.goBack()
     }
     
     func printLine(line: String) {

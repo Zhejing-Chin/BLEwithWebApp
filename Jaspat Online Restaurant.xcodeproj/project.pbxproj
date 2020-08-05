@@ -18,13 +18,12 @@
 		54EB5B4F24BC21CF0061A6E1 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EB5B4E24BC21CF0061A6E1 /* CoreBluetooth.framework */; };
 		54EB5B5124BC24820061A6E1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB5B5024BC24820061A6E1 /* SecondViewController.swift */; };
 		54EB5B5524BC9EF10061A6E1 /* BLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EB5B5424BC9EF10061A6E1 /* BLE.swift */; };
-		7688620F24D9ABE5005331EE /* CB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7688620E24D9ABE5005331EE /* CB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		547578DF24B3130D00D7CAD8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		547578E524B4817B00D7CAD8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		54AEA6AB24B21F2B0009D884 /* Jaspat Online Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jaspat Online Restaurant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54AEA6AB24B21F2B0009D884 /* WebApp-BLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebApp-BLE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AEA6AE24B21F2B0009D884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54AEA6B024B21F2B0009D884 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		54AEA6B524B21F2B0009D884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,7 +34,6 @@
 		54EB5B4E24BC21CF0061A6E1 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		54EB5B5024BC24820061A6E1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		54EB5B5424BC9EF10061A6E1 /* BLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE.swift; sourceTree = "<group>"; };
-		7688620E24D9ABE5005331EE /* CB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,7 @@
 		54AEA6AC24B21F2B0009D884 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54AEA6AB24B21F2B0009D884 /* Jaspat Online Restaurant.app */,
+				54AEA6AB24B21F2B0009D884 /* WebApp-BLE.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,7 +72,6 @@
 			children = (
 				547578E524B4817B00D7CAD8 /* ViewController.swift */,
 				54EB5B5024BC24820061A6E1 /* SecondViewController.swift */,
-				7688620E24D9ABE5005331EE /* CB.swift */,
 				54AEA6AE24B21F2B0009D884 /* AppDelegate.swift */,
 				54AEA6B024B21F2B0009D884 /* SceneDelegate.swift */,
 				54AEA6B424B21F2B0009D884 /* Main.storyboard */,
@@ -112,7 +109,7 @@
 			);
 			name = "Jaspat Online Restaurant";
 			productName = WebApp;
-			productReference = 54AEA6AB24B21F2B0009D884 /* Jaspat Online Restaurant.app */;
+			productReference = 54AEA6AB24B21F2B0009D884 /* WebApp-BLE.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -169,7 +166,6 @@
 			files = (
 				547578E624B4817C00D7CAD8 /* ViewController.swift in Sources */,
 				54EB5B5524BC9EF10061A6E1 /* BLE.swift in Sources */,
-				7688620F24D9ABE5005331EE /* CB.swift in Sources */,
 				54AEA6AF24B21F2B0009D884 /* AppDelegate.swift in Sources */,
 				54EB5B5124BC24820061A6E1 /* SecondViewController.swift in Sources */,
 				54AEA6B124B21F2B0009D884 /* SceneDelegate.swift in Sources */,
@@ -325,7 +321,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = gogain.JaspatOnlineRestaurant;
-				PRODUCT_NAME = "Jaspat Online Restaurant";
+				PRODUCT_NAME = "WebApp-BLE";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,7 +340,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = gogain.JaspatOnlineRestaurant;
-				PRODUCT_NAME = "Jaspat Online Restaurant";
+				PRODUCT_NAME = "WebApp-BLE";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
